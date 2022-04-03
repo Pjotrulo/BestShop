@@ -1,1 +1,1 @@
-# BestShop Piotr Godwin
+# BestShop 
