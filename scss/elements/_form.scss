@@ -1,0 +1,86 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    margin-top: 1.25rem;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+    &:first-of-type {
+      margin-bottom: 2.625rem;
+    }
+  }
+  &__label {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $colorPrimary;
+    line-height: 0.9rem;
+    letter-spacing: 3px;
+    font-size: 0.6875rem;
+  }
+  &__input {
+    border: none;
+    border-bottom: 1px solid $colorGrey;
+    background-color: transparent;
+    line-height: 2.625rem;
+    &:nth-child(2) {
+      margin-bottom: 2rem;
+    }
+    @include tablet {
+      &:nth-child(2) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__conset {
+    margin-top: 1.875rem;
+  }
+  &__checkbox {
+    display: block;
+    position: relative;
+    padding-left: 2.1875rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    font-size: 1.375rem;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    .checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1.5625rem;
+      width: 1.5625rem;
+      background-color: $colorWhite;
+      border: 1px solid $colorGrey;
+      border-radius: 0.25rem;
+    }
+    input {
+      &:checked {
+        ~ .checkbox {
+          background-image: url(../assets/Checkmark.svg);
+          background-position: center;
+          background-size: 50%;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    .consent__text {
+      margin: 0 0.625rem;
+      font-size: 0.75rem;
+      color: $colorGrey;
+      line-height: 1rem;
+    }
+  }
+  .btn {
+    font-size: 0.8125rem;
+    padding: 1.25rem 6.0625rem;
+    align-self: flex-end;
+    margin-top: 1.25rem;
+  }
+}
